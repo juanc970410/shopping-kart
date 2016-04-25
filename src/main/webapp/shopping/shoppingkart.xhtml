@@ -18,7 +18,7 @@
                     <h:outputText value="$#{productos.precioEnPesos}"></h:outputText>
                 </p:column>
                 <p:column style="width:32px;text-align: center">
-                    <p:commandButton update="formProductos" oncomplete="PF('selectCantidad').show();" icon="ui-icon-cart">
+                    <p:commandButton update=":formProductos" oncomplete="PF('selectCantidad').show();" icon="ui-icon-cart">
                         <f:setPropertyActionListener value="#{productos}" target="#{ShoppingKartBackingBean.selectedProduct}"/>
                     </p:commandButton>
                 </p:column>
@@ -44,8 +44,7 @@
             </p:commandButton>
             <br></br>
             <h:outputText value="El precio es: #{ShoppingKartBackingBean.pagar}"></h:outputText>
-            <br></br>
-            <h:outputLink value="/logout">logout</h:outputLink>
+            
         </h:form>
     </h:body>
 
